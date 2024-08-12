@@ -3,11 +3,10 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from fires.views import FireReportViewSet, TwitterReportViewSet
+from fires.views import WildfireViewSet
 
 router = DefaultRouter()
-router.register(r'fire-reports', FireReportViewSet)
-router.register(r'twitter-reports', TwitterReportViewSet)
+router.register(r'fire-reports', WildfireViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

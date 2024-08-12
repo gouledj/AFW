@@ -1,11 +1,11 @@
 from rest_framework import viewsets
-from .models import FireReport, TwitterReport
-from .serializers import FireReportSerializer, TwitterReportSerializer
+from .models import WildfireReport
+from .serializers import FireReportSerializer
 
-class FireReportViewSet(viewsets.ModelViewSet):
-    queryset = FireReport.objects.all()
+class WildfireViewSet(viewsets.ModelViewSet):
+    queryset = WildfireReport.objects.all()
     serializer_class = FireReportSerializer
 
-class TwitterReportViewSet(viewsets.ModelViewSet):
-    queryset = TwitterReport.objects.all()
-    serializer_class = TwitterReportSerializer
+# class WildfireDetailViewSet(viewsets.ModelViewSet):
+#     queryset = WildfireDetail.objects.all()
+#     serializer_class = TwitterReportSerializer
